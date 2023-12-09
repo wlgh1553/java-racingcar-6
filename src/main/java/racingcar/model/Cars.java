@@ -39,4 +39,10 @@ public class Cars {
         int winningDistance = getWinnerDistance();
         return racingCars.stream().filter(car -> car.getDistance() >= winningDistance).collect(Collectors.toList());
     }
+
+    public List<String> raceResult() {
+        List<String> raceResults = new ArrayList<>();
+        racingCars.forEach(e -> raceResults.add(e.toString()));
+        return raceResults;
+    }
 }

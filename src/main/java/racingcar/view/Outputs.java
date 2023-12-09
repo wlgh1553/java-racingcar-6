@@ -11,4 +11,8 @@ public class Outputs {
         results.forEach(System.out::println);
         System.out.println();
     }
+
+    public static void showWinnersName(List<String> winners) {
+        System.out.println("최종 우승자 : " + String.join(", ", winners));
+    }
 }

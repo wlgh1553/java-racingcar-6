@@ -12,6 +12,10 @@ public class Car {
         distance = 0;
     }
 
+    public String getCarName() {
+        return name;
+    }
+
     private void validCarName(String name) {
         if (!checkNameLength(name.trim().length())) {
             throw new IllegalArgumentException();

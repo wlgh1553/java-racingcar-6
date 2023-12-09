@@ -1,5 +1,8 @@
 package racingcar.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+import racingcar.model.Car;
 import racingcar.model.Cars;
 import racingcar.view.Inputs;
 import racingcar.view.Outputs;
@@ -15,6 +18,7 @@ public class MainController {
 
     public void run() {
         playRace();
+        showWinner(racingCars.getWinners());
     }
 
     private void playRace() {
@@ -25,7 +29,9 @@ public class MainController {
         }
     }
 
-    private void showWinner() {
-
+    private void showWinner(List<Car> winners) {
+        List<String> names = new ArrayList<>();
+        winners.forEach(e -> names.add(e.getCarName()));
+        Outputs.showWinnersName(names);
     }
 }
